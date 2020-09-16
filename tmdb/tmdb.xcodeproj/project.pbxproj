@@ -20,8 +20,7 @@
 		3011B73224E585C500595869 /* NibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3011B73124E585C500595869 /* NibView.swift */; };
 		3011B73624E586A300595869 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3011B73424E586A300595869 /* LoadingView.swift */; };
 		3011B73724E586A300595869 /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3011B73524E586A300595869 /* LoadingView.xib */; };
-		3011B73924E5879E00595869 /* GenreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3011B73824E5879E00595869 /* GenreTests.swift */; };
-		3011B73B24E5A93500595869 /* ConfigurationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3011B73A24E5A93500595869 /* ConfigurationTests.swift */; };
+		3014EB7225018A3400A79412 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3014EB7125018A3400A79412 /* WebKit.framework */; };
 		301B362124E43048007C2411 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301B362024E43048007C2411 /* AppDelegate.swift */; };
 		301B362A24E43049007C2411 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 301B362924E43049007C2411 /* Assets.xcassets */; };
 		301B362D24E43049007C2411 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 301B362B24E43049007C2411 /* LaunchScreen.storyboard */; };
@@ -80,8 +79,7 @@
 		3011B73124E585C500595869 /* NibView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibView.swift; sourceTree = "<group>"; };
 		3011B73424E586A300595869 /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		3011B73524E586A300595869 /* LoadingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadingView.xib; sourceTree = "<group>"; };
-		3011B73824E5879E00595869 /* GenreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreTests.swift; sourceTree = "<group>"; };
-		3011B73A24E5A93500595869 /* ConfigurationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationTests.swift; sourceTree = "<group>"; };
+		3014EB7125018A3400A79412 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		301B361D24E43048007C2411 /* tmdb.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tmdb.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		301B362024E43048007C2411 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		301B362924E43049007C2411 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -124,6 +122,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3014EB7225018A3400A79412 /* WebKit.framework in Frameworks */,
 				D840EFEA4EEC8B91A72D426B /* Pods_tmdb.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -219,15 +218,13 @@
 		301B361F24E43048007C2411 /* tmdb */ = {
 			isa = PBXGroup;
 			children = (
-				3011B71824E48A2E00595869 /* Model */,
-				301B366224E4371A007C2411 /* Utils */,
 				301B365324E4308B007C2411 /* API */,
-				301B365224E43085007C2411 /* Application */,
+				3011B71824E48A2E00595869 /* Model */,
 				301B365124E4307E007C2411 /* Modules */,
 				3011B72824E57A2100595869 /* Repository */,
+				301B366224E4371A007C2411 /* Utils */,
+				301B365224E43085007C2411 /* Application */,
 				301B365024E43077007C2411 /* Resources */,
-				301B362924E43049007C2411 /* Assets.xcassets */,
-				301B362B24E43049007C2411 /* LaunchScreen.storyboard */,
 				301B362E24E43049007C2411 /* Info.plist */,
 			);
 			path = tmdb;
@@ -237,8 +234,6 @@
 			isa = PBXGroup;
 			children = (
 				301B363724E43049007C2411 /* tmdbTests.swift */,
-				3011B73824E5879E00595869 /* GenreTests.swift */,
-				3011B73A24E5A93500595869 /* ConfigurationTests.swift */,
 				301B363924E43049007C2411 /* Info.plist */,
 			);
 			path = tmdbTests;
@@ -256,6 +251,8 @@
 		301B365024E43077007C2411 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				301B362B24E43049007C2411 /* LaunchScreen.storyboard */,
+				301B362924E43049007C2411 /* Assets.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -349,6 +346,7 @@
 		820F29A3261F5BC497053229 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3014EB7125018A3400A79412 /* WebKit.framework */,
 				34F1545B27709CC261A696B9 /* Pods_tmdb.framework */,
 				A1D4F17892519331829819A0 /* Pods_tmdbTests.framework */,
 				DDD4511BFA126D007E4DC7EF /* Pods_tmdbUITests.framework */,
@@ -650,8 +648,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				301B363824E43049007C2411 /* tmdbTests.swift in Sources */,
-				3011B73924E5879E00595869 /* GenreTests.swift in Sources */,
-				3011B73B24E5A93500595869 /* ConfigurationTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -848,7 +844,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F45F2A8DB283E44832E9A15F /* Pods-tmdbTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ATDGADGXBT;
@@ -871,7 +867,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6B5371B3CA3447BF76076216 /* Pods-tmdbTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ATDGADGXBT;
@@ -894,7 +890,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8FF062C0334B3FA7B1137BC2 /* Pods-tmdbUITests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ATDGADGXBT;
 				INFOPLIST_FILE = tmdbUITests/Info.plist;
@@ -915,7 +911,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E3298352DE1DC72B43CFB689 /* Pods-tmdbUITests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ATDGADGXBT;
 				INFOPLIST_FILE = tmdbUITests/Info.plist;

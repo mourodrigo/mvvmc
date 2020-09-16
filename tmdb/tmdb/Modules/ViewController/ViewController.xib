@@ -11,6 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController" customModule="tmdb" customModuleProvider="target">
             <connections>
                 <outlet property="button" destination="Ige-1Z-3Pc" id="3Ac-Db-ojI"/>
+                <outlet property="present" destination="slV-w8-J0R" id="BRx-nW-HXv"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,13 +20,35 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ige-1Z-3Pc">
-                    <rect key="frame" x="184" y="433" width="46" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" title="Button"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ige-1Z-3Pc">
+                    <rect key="frame" x="107" y="433" width="200" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="200" id="uIA-bU-9wK"/>
+                    </constraints>
+                    <state key="normal" title="Push"/>
+                    <connections>
+                        <action selector="didTapButton:" destination="-1" eventType="touchUpInside" id="GeJ-35-qFb"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="slV-w8-J0R">
+                    <rect key="frame" x="107" y="495" width="200" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="200" id="RuQ-vh-abV"/>
+                    </constraints>
+                    <state key="normal" title="Present"/>
+                    <connections>
+                        <action selector="presentDidTap:" destination="-1" eventType="touchUpInside" id="ypB-mM-jey"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="Ige-1Z-3Pc" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="JDi-uZ-Nko"/>
+                <constraint firstItem="slV-w8-J0R" firstAttribute="trailing" secondItem="Ige-1Z-3Pc" secondAttribute="trailing" id="aJc-mo-Cyf"/>
+                <constraint firstItem="Ige-1Z-3Pc" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="eI7-vZ-0X9"/>
+                <constraint firstItem="slV-w8-J0R" firstAttribute="top" secondItem="Ige-1Z-3Pc" secondAttribute="bottom" constant="32" id="hHs-6s-9C7"/>
+                <constraint firstItem="slV-w8-J0R" firstAttribute="leading" secondItem="Ige-1Z-3Pc" secondAttribute="leading" id="xSG-97-UdC"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="132" y="153"/>
         </view>
