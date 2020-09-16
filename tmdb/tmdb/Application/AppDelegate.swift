@@ -41,9 +41,6 @@ extension AppDelegate {
         SharedLocator.shared.register(ConfigurationRepositoryProtocol.self,
                                       instance: ConfigurationRepository())
 
-        SharedLocator.shared.register(ImageRepository.self, instance: AFImageRepository())
-
-
         // setup root window (Startup Module)
         let rootCoordinator = Coordinator()
         let rootWindow = UIWindow(frame: UIScreen.main.bounds)
