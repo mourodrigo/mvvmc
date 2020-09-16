@@ -29,7 +29,7 @@
                                 <constraint firstAttribute="height" constant="100" id="jXl-qT-7aw"/>
                             </constraints>
                         </view>
-                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="ZwE-18-GuQ">
+                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="ZwE-18-GuQ">
                             <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
                         </activityIndicatorView>
                     </subviews>

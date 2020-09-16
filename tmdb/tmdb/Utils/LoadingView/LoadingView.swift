@@ -28,6 +28,11 @@ class LoadingView: NibView {
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
+        if #available(iOS 13.0, *) {
+            activity.style = .large
+        } else {
+            activity.style = .whiteLarge
+        }
 	}
 
 	static func show(on parent: UIView) {
