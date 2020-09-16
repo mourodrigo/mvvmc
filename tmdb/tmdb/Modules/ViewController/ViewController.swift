@@ -16,6 +16,8 @@ class ViewController: BaseViewController {
 
     private weak var _viewModel: ViewModelProtocol!
     override var viewModel: BaseViewModelProtocol { return _viewModel }
+    @IBOutlet weak var button: UIButton!
+    @IBOutlet weak var present: UIButton!
     private let _disposeBag = DisposeBag()
 
     //************************************************
@@ -40,6 +42,16 @@ class ViewController: BaseViewController {
     // MARK: - Setup
     //************************************************
 
-    private func setupOnLoad() {}
+    private func setupOnLoad() {
+        self.navigationItem.title = "\(String(describing: self))"
+    }
+
+    @IBAction func didTapButton(_ sender: Any) {
+        _viewModel.pushCoord()
+    }
+
+    @IBAction func presentDidTap(_ sender: Any) {
+        _viewModel.presentCoord()
+    }
 
 }

@@ -1,6 +1,5 @@
 platform :ios, '11.0'
 use_frameworks!
-#inhibit_all_warnings! //TODO
 
 supports_swift_versions '>= 3.0', '<= 5.1'
 
@@ -12,6 +11,7 @@ def common_pods
   pod 'RxSwift', '5.1.0'
   pod 'RxCocoa', '5.1.0'
   pod 'RxRelay', '5.1.0'
+
   pod 'RxGesture', '3.0.0'
 end
 
@@ -31,13 +31,12 @@ target 'tmdb' do
 
   #Networking
   pod 'Alamofire', '5.2'
-  pod 'AlamofireImage', '~> 4.1'
 
   end
 
 # Pods for Tests
 target 'tmdbTests' do
-  pod 'RxTest', '5.1.0'
+    pod 'RxTest', '5.1.0'
   common_pods
 end
 

@@ -48,7 +48,7 @@ extension AppDelegate {
         let rootCoordinator = Coordinator()
         let rootWindow = UIWindow(frame: UIScreen.main.bounds)
         rootWindow.backgroundColor = .white
-        rootWindow.rootViewController = rootCoordinator.viewController
+        rootWindow.rootViewController = UINavigationController.init(rootViewController: rootCoordinator.viewController)
         rootWindow.makeKeyAndVisible()
         window = rootWindow
 

@@ -5,7 +5,8 @@ import UIKit
 import RxSwift
 
 protocol CoordinatorProtocol: BaseCoordinatorProtocol {
-    func presentDiscoverMovies()
+    func pushCoord()
+    func presentCoord()
 }
 
 class Coordinator: BaseCoordinator, CoordinatorProtocol {
@@ -17,7 +18,10 @@ class Coordinator: BaseCoordinator, CoordinatorProtocol {
     private var _viewModel: ViewModel!
     private var _viewController: ViewController!
     override var viewController: UIViewController { return _viewController }
-    private var _disposeBag = DisposeBag()
+
+//    override var navigationController: UINavigationController? {
+//        return _navigationController
+//    }
 
     //************************************************
     // MARK: - Lifecycle
@@ -28,28 +32,16 @@ class Coordinator: BaseCoordinator, CoordinatorProtocol {
 
         _viewModel = ViewModel(coordinator: self)
         _viewController = ViewController(viewModel: _viewModel)
-
-        SharedLocator.shared.configurationRepository.state.bind { (status) in
-            switch status {
-
-            case .success(configuration: _):
-                self.presentDiscoverMovies()
-            case .loading: break
-
-            case .error(error:  _):
-                DispatchQueue.global().asyncAfter(deadline: .now()+1) {
-                    //trying to fetch configuration again if something happend
-                    //like opening the app without internet
-                    SharedLocator.shared.configurationRepository.fetch()
-                }
-            }
-        }.disposed(by: _disposeBag)
-
     }
 
-    func presentDiscoverMovies() {
-        let discover = DiscoverMoviesCoordinator()
-        self.present(discover)
+    func pushCoord() {
+        let coord = Coordinator.init()
+        self.push(coord)
+    }
+
+    func presentCoord() {
+        let coord = Coordinator.init()
+        self.present(coord)
     }
 
 }
